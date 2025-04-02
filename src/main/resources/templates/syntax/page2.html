@@ -2,9 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>문법 페이지 2</title>
 </head>
 <body>
+    <div>
 
+      <h2>사야될 물건들</h2>
+      <!-- <ul th:each="item : ${shoppingList}"> 로 설정해두면 th:each가 있는 (ul)태그부터 반복해서 생성된다.-->
+      <ul>
+<!--        <li th:each="item : ${shoppingList}" th:text="${item}"></li>-->
+        <li th:each="item : ${shoppingList}">[[${item}]]</li>
+      </ul>
+    </div>
 </body>
 </html>
