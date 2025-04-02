@@ -1,5 +1,6 @@
 package io.silver.greppthymeleaf.controller;
 
+import io.silver.greppthymeleaf.Post;
 import java.util.Arrays;
 import java.util.List;
 import org.springframework.stereotype.Controller;
@@ -25,5 +26,12 @@ public class TemplateController2 {
         model.addAttribute("shoppingList", shoppingList);
 
         return "/syntax/page2";
+    }
+
+    @GetMapping("/3")
+    public String syntaxPage3(Model model) {
+        model.addAttribute("post", new Post(1L, "안녕하세요", "관리자", "안녕하세요 여러분~!"));
+
+        return "/syntax/page3";
     }
 }
