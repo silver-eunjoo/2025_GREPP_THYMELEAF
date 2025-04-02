@@ -6,7 +6,8 @@
 </head>
 <body>
     <div class="navbar bg-base-200" th:fragment="top_bar">
-    <button class="btn btn-ghost text-lg">Example1</button>
+    <button th:if="${isLogin}" class="btn btn-ghost text-lg">Hello!</button>
+    <button th:unless="${isLogin}" class="btn btn-ghost text-lg">No Auth!</button>
     </div>
 </body>
 </html>
