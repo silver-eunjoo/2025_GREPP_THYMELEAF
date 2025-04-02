@@ -13,7 +13,7 @@
     <div>
         <h3>게시물 작성</h3>
         <form method="post" th:object="${post}">
-            <input type="hidden" value="user1" th:field="*{author}">
+            <input type="hidden" value="user1" name="author">
             <div>
                 <span>제목 : </span>
                 <input type="text" th:field="*{title}">
