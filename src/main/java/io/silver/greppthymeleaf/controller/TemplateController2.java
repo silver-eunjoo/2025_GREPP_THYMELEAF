@@ -58,4 +58,15 @@ public class TemplateController2 {
     public String syntaxPage5() {
         return "/syntax/page5";
     }
+
+    @GetMapping("/6")
+    public String syntaxPage6(Integer target, Model model) {
+        model.addAttribute("target", target);
+        return "/syntax/page6";
+    }
+
+    @GetMapping("/7")
+    public String syntaxPage7() {
+        return "/syntax/page7";
+    }
 }
