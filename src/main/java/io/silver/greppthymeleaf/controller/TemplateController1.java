@@ -44,6 +44,15 @@ public class TemplateController1 {
         return "page3";
     }
 
+    @GetMapping("/page4")
+    public String showPage4(Model model) {
+
+        model.addAttribute("cellPhone", "iphone11");
+        model.addAttribute("countryCallingCode", "+82");
+
+        return "page4";
+    }
+
 
 
 
