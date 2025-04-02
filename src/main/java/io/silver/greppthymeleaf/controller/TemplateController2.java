@@ -53,4 +53,9 @@ public class TemplateController2 {
         log.info("post.toString() = {}", post.toString());
         return "/syntax/page4";
     }
+
+    @GetMapping("/5")
+    public String syntaxPage5() {
+        return "/syntax/page5";
+    }
 }
