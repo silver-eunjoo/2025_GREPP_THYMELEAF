@@ -3,11 +3,14 @@ package io.silver.greppthymeleaf.controller;
 import io.silver.greppthymeleaf.Post;
 import java.util.Arrays;
 import java.util.List;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+@Slf4j
 @Controller
 @RequestMapping("/page")
 public class TemplateController2 {
@@ -33,5 +36,21 @@ public class TemplateController2 {
         model.addAttribute("post", new Post(1L, "안녕하세요", "관리자", "안녕하세요 여러분~!"));
 
         return "/syntax/page3";
+    }
+
+    @GetMapping("/4")
+    public String syntaxPage4(Model model) {
+        model.addAttribute("post", new Post());
+        return "/syntax/page4";
+
+    }
+
+    @PostMapping("/4")
+    public String processSyntaxPage4(Post post) {
+
+//        String author = "관리자";
+//        post.setAuthor(author);
+        log.info("post.toString() = {}", post.toString());
+        return "/syntax/page4";
     }
 }
