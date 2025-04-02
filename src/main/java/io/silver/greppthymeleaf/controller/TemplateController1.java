@@ -37,7 +37,9 @@ public class TemplateController1 {
     @GetMapping("/page3")
     public String showPage3(Model model) {
 
-        model.addAttribute("script", "<script>alert('메롱');</script>");
+        String unsafeString = "<script>alert('메롱');</script>";
+
+        model.addAttribute("script", unsafeString);
 
         return "page3";
     }
